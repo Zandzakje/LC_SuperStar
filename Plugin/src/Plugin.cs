@@ -35,40 +35,10 @@ namespace SuperStar {
             }
 
             // We load our assets from our asset bundle. Remember to rename them both here and in our Unity project.
-            var SuperStar = ModAssets.LoadAsset<EnemyType>("SuperStar");
-            var SuperStarTN = ModAssets.LoadAsset<TerminalNode>("SuperStarTN");
-            var SuperStarTK = ModAssets.LoadAsset<TerminalKeyword>("SuperStarTK");
+            Item superStar = ModAssets.LoadAsset<Item>("SuperStar");
+            NetworkPrefabs.RegisterNetworkPrefab(superStar.spawnPrefab);
+            Items.RegisterScrap(superStar, BoundConfig.SpawnWeight.Value, Levels.LevelTypes.All);
 
-            // Optionally, we can list which levels we want to add our enemy to, while also specifying the spawn weight for each.
-            /*
-            var SuperStarLevelRarities = new Dictionary<Levels.LevelTypes, int> {
-                {Levels.LevelTypes.ExperimentationLevel, 10},
-                {Levels.LevelTypes.AssuranceLevel, 40},
-                {Levels.LevelTypes.VowLevel, 20},
-                {Levels.LevelTypes.OffenseLevel, 30},
-                {Levels.LevelTypes.MarchLevel, 20},
-                {Levels.LevelTypes.RendLevel, 50},
-                {Levels.LevelTypes.DineLevel, 25},
-                // {Levels.LevelTypes.TitanLevel, 33},
-                // {Levels.LevelTypes.All, 30},     // Affects unset values, with lowest priority (gets overridden by Levels.LevelTypes.Modded)
-                {Levels.LevelTypes.Modded, 60},     // Affects values for modded moons that weren't specified
-            };
-            // We can also specify custom level rarities
-            var SuperStarCustomLevelRarities = new Dictionary<string, int> {
-                {"EGyptLevel", 50},
-                {"46 Infernis", 69},    // Either LLL or LE(C) name can be used, LethalLib will handle both
-            };
-            */
-
-            // Network Prefabs need to be registered. See https://docs-multiplayer.unity3d.com/netcode/current/basics/object-spawning/
-            // LethalLib registers prefabs on GameNetworkManager.Start.
-            NetworkPrefabs.RegisterNetworkPrefab(SuperStar.enemyPrefab);
-
-            // For different ways of registering your enemy, see https://github.com/EvaisaDev/LethalLib/blob/main/LethalLib/Modules/Enemies.cs
-            Enemies.RegisterEnemy(SuperStar, BoundConfig.SpawnWeight.Value, Levels.LevelTypes.All, SuperStarTN, SuperStarTK);
-            // For using our rarity tables, we can use the following:
-            // Enemies.RegisterEnemy(SuperStar, SuperStarLevelRarities, SuperStarCustomLevelRarities, SuperStarTN, SuperStarTK);
-            
             Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
         }
 
