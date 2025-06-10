@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 3501251227
+CRC: 3255209297
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: d0c57dfc1cfaa07edb794c3d369cb133
+    Hash: ebe8537e32eb336949a12bfd64450f2a
   TypeTreeHash:
     serializedVersion: 2
-    Hash: ef0d2b66f596cd8206fd7d14ddc77703
+    Hash: 30f0ef1b7fea40711eb814c398eac2db
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: d0c57dfc1cfaa07edb794c3d369cb133
+    Hash: ebe8537e32eb336949a12bfd64450f2a
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -30,8 +30,18 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 65
   Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
 - Class: 82
   Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 108
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: c30496d6ae6d6f907456e10a94e01ec6, type: 3}
 - Class: 114
@@ -53,11 +63,17 @@ ClassTypes:
 SerializeReferenceClassIdentifiers:
 - AssemblyName: Assembly-CSharp
   ClassName: Battery
+- AssemblyName: Unity.RenderPipelines.HighDefinition.Runtime
+  ClassName: UnityEngine.Rendering.HighDefinition.BoolScalableSettingValue
+- AssemblyName: Unity.RenderPipelines.HighDefinition.Runtime
+  ClassName: UnityEngine.Rendering.HighDefinition.IntScalableSettingValue
 Assets:
 - Assets/ModAssets/SuperStar/Models/estrellitaaa.fbx
-- Assets/ModAssets/SuperStar/SuperStar.prefab
+- Assets/ModAssets/SuperStar/Animations/SuperStar.controller
 - Assets/ModAssets/SuperStar/SuperStar.asset
 - Assets/ModAssets/SuperStar/Materials/Material.001.mat
+- Assets/ModAssets/SuperStar/SuperStar.prefab
 - Assets/ModAssets/SuperStar/Materials/Material.002.mat
+- Assets/ModAssets/SuperStar/Animations/Hovering.anim
 - Assets/ModAssets/SuperStar/star_icon.png
 Dependencies: []
