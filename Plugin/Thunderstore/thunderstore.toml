@@ -1,5 +1,5 @@
 [config]
-schemaVersion = "1.0.0"
+schemaVersion = "1.0.1"
 
 [general]
 repository = "https://github.com/Zandzakje/LC_SuperStar.git"
@@ -10,7 +10,7 @@ websiteUrl = "https://github.com/Zandzakje/LC-SuperStar"
 containsNsfwContent = false
 [package.dependencies]
 BepInEx-BepInExPack = "5.4.2100"
-Evaisa-LethalLib = "0.15.1"
+Evaisa-LethalLib = "1.1.0"
 
 [build]
 icon = "./SuperStar_Icon.png"
