@@ -1,24 +1,24 @@
 [config]
-schemaVersion = "0.0.1"
+schemaVersion = "1.0.0"
 
 [general]
-repository = "https://thunderstore.io"
+repository = "https://github.com/Zandzakje/LC_SuperStar.git"
 
 [package]
 description = "The super star from the Mario series as scrap for Lethal Company."
-websiteUrl = "https://github.com/Hamunii/LC-SuperStar"
+websiteUrl = "https://github.com/Zandzakje/LC-SuperStar"
 containsNsfwContent = false
 [package.dependencies]
 BepInEx-BepInExPack = "5.4.2100"
 Evaisa-LethalLib = "0.15.1"
 
 [build]
-icon = "./icon.png"
+icon = "./SuperStar_Icon.png"
 readme = "./README.md"
 outdir = "./Packages"
 
 [[build.copy]]
-source = "../bin/Release/netstandard2.1/Hamunii.SuperStar.dll"
+source = "../bin/Release/netstandard2.1/Zandzakje.SuperStar.dll"
 target = "plugins/SuperStar/"
 
 [[build.copy]]
@@ -33,4 +33,4 @@ target = "/"
 communities = [ "lethal-company", ]
 [publish.categories]
 # Get the list of categories from https://thunderstore.io/api/experimental/community/lethal-company/category/
-lethal-company = [ "bepinex", "clientside", "serverside", "monsters", "mods", ]
+lethal-company = [ "bepinex", "clientside", "serverside", "items", "mods", ]
